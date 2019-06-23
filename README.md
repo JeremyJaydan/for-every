@@ -1,10 +1,13 @@
 
-# for-every
+# for-next
 simple for loop iterator thing
 
 ### Simple example
 ```js
-forEvery(["cat", "dog", "dingo"], (animal, {next}) => {
+
+const $for = require("for-next");
+
+$for(["cat", "dog", "dingo"], (animal, {next}) => {
 
   console.log("animal: ", animal);
   // The iterator won't continue if you don't invoke next().
@@ -23,13 +26,15 @@ forEvery(["cat", "dog", "dingo"], (animal, {next}) => {
 
   })
 ;
+
 ```
 
 ### More examples
 
 ```js
+
 const countdown = 5;
-forEvery(countdown, (index, {index, next, stop, values, ctx}) => {
+$for(countdown, (index, {index, next, stop, values, ctx}) => {
 
   let count = countdown - index + 1;
 
@@ -66,6 +71,7 @@ forEvery(countdown, (index, {index, next, stop, values, ctx}) => {
 // 1
 // Go!
 // { values: [ 5, 4, 3, 2.5, 2, 1.5, 1 ] }
+
 ```
 
 More examples work in progress..

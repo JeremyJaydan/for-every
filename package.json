@@ -1,19 +1,19 @@
 {
-  "name": "for-every",
+  "name": "for-next",
   "version": "1.0.0",
   "description": "simple for loop iterator thing",
-  "main": "forEvery.js",
+  "main": "for-next.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeremyJaydan/for-every.git"
+    "url": "git+https://github.com/JeremyJaydan/for-next.git"
   },
   "author": "JeremyJaydan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JeremyJaydan/for-every/issues"
+    "url": "https://github.com/JeremyJaydan/for-next/issues"
   },
-  "homepage": "https://github.com/JeremyJaydan/for-every#readme"
+  "homepage": "https://github.com/JeremyJaydan/for-next#readme"
 }

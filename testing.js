@@ -1,8 +1,8 @@
 
-const forEvery = require("./");
+const $for = require("./");
 
 
-// forEvery(["cat", "dog", "dingo"], (animal, {next}) => {
+// $for(["cat", "dog", "dingo"], (animal, {next}) => {
 
 //   console.log("animal: ", animal);
 //   // The iterator won't continue if you don't invoke next().
@@ -23,7 +23,7 @@ const forEvery = require("./");
 // ;
 
 const countdown = 5;
-forEvery(countdown, (index, {next, skip, ctx}) => {
+$for(countdown, (index, {next, skip, ctx}) => {
 
   let count = countdown - index + 1;
 
@@ -50,6 +50,7 @@ forEvery(countdown, (index, {next, skip, ctx}) => {
     console.log({values});
   })
 ;
+
 /* OUTPUT */
 // 5
 // 4
