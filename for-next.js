@@ -2,17 +2,24 @@
 /**
 * @author JeremyJaydan <jeremy@parmenter.io>
 * @license MIT
-* @desc Simple iteration script
+* @desc Simple iteration script https://github.com/JeremyJaydan/for-next
 */
-module.exports = async (target, callback = () => {}, options = {}) => {
-  if(target){
+(function(fn){
 
+  !!!!!!!!!!!! /* for-next */ !!!!!!!!!!!!
+  (typeof module !== "undefined") ? (module.exports = fn) : (window["for-next"] = fn)
+
+})(async (target, callback = () => {}, options = {}) => {
+
+  if(target){
     return new Promise((resolve, reject) => {
-      let iterator = target;
+
+      const iterator = target;
+      const length = iterator.length;
+
       if(typeof target === "number") iterator = new Array(target).fill().map((a, i) => (i + 1));
       if(target.constructor === Object) iterator = Object.entries(target);
-
-      const length = iterator.length;
+      if(length <= 0) return reject(iterator);
 
       const {
         interval = 0
@@ -60,5 +67,5 @@ module.exports = async (target, callback = () => {}, options = {}) => {
     });
 
   }
-};
+});
 
