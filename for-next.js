@@ -19,7 +19,7 @@
 
       if(typeof target === "number") iterator = new Array(target).fill().map((a, i) => (i + 1));
       if(target.constructor === Object) iterator = Object.entries(target);
-      if(length <= 0) return reject(iterator);
+      if(length <= 0) return resolve(iterator);
 
       const {
         interval = 0
