@@ -14,7 +14,7 @@
   if(target){
     return new Promise((resolve, reject) => {
 
-      const iterator = target;
+      let iterator = target;
       const length = iterator.length;
 
       if(typeof target === "number") iterator = new Array(target).fill().map((a, i) => (i + 1));
